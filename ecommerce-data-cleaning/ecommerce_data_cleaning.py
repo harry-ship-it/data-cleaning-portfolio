@@ -21,7 +21,7 @@ data = data.drop_duplicates()
 
 # Step 3: Standardize Date Format
 if 'date' in data.columns:
-    data['date'] = pd.to_datetime(data['date'], errors='coerce')
+    data['date'] = pd.to_datetime(data['date'], format='%Y-%m-%d', errors='coerce')
 
 # Step 4: Normalize Text Columns
 for col in categorical_columns:
